@@ -14,9 +14,8 @@ class Scraper:
 
     def scrape(self):
         html = urllib.request.urlopen(self.site).read()
-        parser = "html.parser"
         with open(self.path, "w") as url_file:
-            for tag in BeautifulSoup(html, parser).find_all(class_="DY5T1d"):
+            for tag in BeautifulSoup(html, "html.parser").find_all(class_="DY5T1d"):
                 url_str = str(tag)
                 if url_str is None:
                     continue
