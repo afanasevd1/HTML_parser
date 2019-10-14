@@ -24,6 +24,5 @@ class Scraper:
             url_file.write('\n<base href="https://news.google.ru/"</>')
 
 
-
 news = "https://news.google.ru/"
 Scraper(news).scrape()
