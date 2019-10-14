@@ -4,8 +4,11 @@ import os
 
 
 class Scraper:
-    #
-    path = os.path.join("/home", "dmitriy", "learning_python", "url.html")
+
+    os_path = os.getenv("HOME")   # Recomended for Windows
+    #os_path = os.environ['HOME']
+    path = os.path.join(os_path + "/url.html")
+    print(path)
     n = 1
 
     def __init__(self, site):
