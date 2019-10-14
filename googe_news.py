@@ -6,9 +6,8 @@ import os
 class Scraper:
 
     os_path = os.getenv("HOME")   # Recomended for Windows
-    #os_path = os.environ['HOME']
+#   os_path = os.environ['HOME']
     path = os.path.join(os_path + "/url.html")
-    print(path)
     n = 1
 
     def __init__(self, site):
@@ -26,7 +25,7 @@ class Scraper:
                 continue
             url_file.write("<p> {}) - ".format(self.n) + url_str + "</p>")
             self.n += 1
-        url_file.write('\n<base href="https://news.google.com/"</>')
+        url_file.write('\n<base href="https://news.google.ru/"</>')
         url_file.close()
 
 
